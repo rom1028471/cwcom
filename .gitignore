@@ -1,0 +1,45 @@
+node_modules/
+order-api/node_modules/
+
+
+# Backend
+order-api/target/
+order-api/.mvn/
+order-api/mvnw
+order-api/mvnw.cmd
+order-api/*.log
+order-api/src/main/resources/application-local.yml
+
+# Frontend
+order-ui/node_modules/
+order-ui/.pnp
+order-ui/.pnp.js
+order-ui/coverage/
+order-ui/build/
+order-ui/.DS_Store
+order-ui/.env.local
+order-ui/.env.development.local
+order-ui/.env.test.local
+order-ui/.env.production.local
+order-ui/npm-debug.log*
+order-ui/yarn-debug.log*
+order-ui/yarn-error.log*
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

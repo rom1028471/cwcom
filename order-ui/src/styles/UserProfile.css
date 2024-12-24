@@ -1,0 +1,111 @@
+.user-profile-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.user-profile-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.user-profile-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+}
+
+.user-profile-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.profile-details, .profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-item strong {
+  color: #666;
+  margin-right: 10px;
+}
+
+.profile-edit-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.profile-edit-form .form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.profile-edit-form .form-row .form-group {
+  flex: 1;
+}
+
+.profile-edit-form label {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.profile-edit-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.profile-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-actions button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.profile-actions button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  color: #ff0000;
+}

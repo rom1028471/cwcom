@@ -1,0 +1,81 @@
+spring:
+  application:
+    name: order-api
+  main:
+    allow-bean-definition-overriding: true
+    banner-mode: 'off'
+    allow-circular-references: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-init-sql: SELECT 1
+      maximum-pool-size: 10
+      connection-timeout: 20000
+      idle-timeout: 300000
+      max-lifetime: 1200000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
+        jdbc:
+          time_zone: UTC
+          batch_size: 50
+        connection:
+          characterEncoding: UTF-8
+          useUnicode: true
+        current_session_context_class: thread
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+    com.roomih.orderapi: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.boot: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  file:
+    name: target/spring-boot.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+app:
+  jwt:
+    secret: v9y$B&E)H@MbQeThWmZq4t7w!z%C*F-JaNdRfUjXn2r5u8x/A?D(G+KbPeShVkYp
+    expiration:
+      minutes: 1440
+  cors:
+    allowed-origins: 
+      - http://localhost:3000
+      - http://localhost:8080
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+
+spring.mandatory-file-encoding: UTF-8
+file.encoding: UTF-8
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+  packages-to-scan: com.roomih.orderapi.rest
