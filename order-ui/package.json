@@ -1,13 +1,11 @@
 {
-  "name": "publication-management-ui",
-  "version": "1.0.0",
+  "name": "order-ui",
+  "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "axios": "^1.5.0",
     "bootstrap": "^5.3.3",
-    "publication-management-ui": "file:",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.6",
     "react-dom": "^18.2.0",
@@ -27,8 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx",
-    "lint:fix": "eslint src --ext .js,.jsx --fix",
-    "prepare": "npm install"
+    "lint:fix": "eslint src --ext .js,.jsx --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -39,27 +36,6 @@
       "no-unused-vars": "warn",
       "react-hooks/exhaustive-deps": "warn"
     }
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/index.js",
-      "!src/reportWebVitals.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
-      }
-    },
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    },
-    "testMatch": [
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx}"
-    ]
   },
   "browserslist": {
     "production": [

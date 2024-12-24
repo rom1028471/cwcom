@@ -1,6 +1,5 @@
+# Dependencies
 node_modules/
-order-api/node_modules/
-
 
 # Backend
 order-api/target/
@@ -8,7 +7,6 @@ order-api/.mvn/
 order-api/mvnw
 order-api/mvnw.cmd
 order-api/*.log
-order-api/src/main/resources/application-local.yml
 
 # Frontend
 order-ui/node_modules/
@@ -16,7 +14,6 @@ order-ui/.pnp
 order-ui/.pnp.js
 order-ui/coverage/
 order-ui/build/
-order-ui/.DS_Store
 order-ui/.env.local
 order-ui/.env.development.local
 order-ui/.env.test.local

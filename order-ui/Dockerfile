@@ -1,14 +1,16 @@
 FROM node:18-alpine as builder
 WORKDIR /app
 
+# Копируем оба файла
 COPY package*.json ./
 
-RUN npm cache clean --force && npm install --legacy-peer-deps --verbose
+# Используем clean install с package-lock.json
+RUN npm ci --legacy-peer-deps
 
 COPY . .
-
 RUN npm run build
 
+# Используем nginx для раздачи статики
 FROM nginx:alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
